@@ -1,6 +1,6 @@
 /* globals gauge*/
 "use strict";
-const { openBrowser, closeBrowser, within, click, screenshot,$ } = require('taiko');
+const { openBrowser, closeBrowser, within, click, screenshot,$,doubleClick } = require('taiko');
 const assert = require("assert");
 const path = require("path");
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
@@ -20,5 +20,9 @@ gauge.customScreenshotWriter = async function () {
 };
 
 step("Click on <element> within row with index <index>", async function(element, index) {
-	click($('[col-id="'+element+'"]'), within($('[row-index="'+index+'"]')))
+	await click($('[col-id="'+element+'"]'), within($('[row-index="'+index+'"]')));
+});
+
+step("Doubleclick on <element> within row with index <index>", async function(element, index) {
+	await doubleClick($('[col-id="'+element+'"]'), within($('[row-index="'+index+'"]')));
 });
