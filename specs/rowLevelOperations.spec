@@ -4,4 +4,6 @@
 
 ## Plain text in record
 
-* Doubleclick on "rating" within row with index "1"
+* Doubleclick on "language" within row with index "1"
+* Click on "language" within row with index "1"
+* Select "Spanish" from list
