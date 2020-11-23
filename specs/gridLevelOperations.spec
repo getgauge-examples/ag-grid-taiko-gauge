@@ -5,16 +5,16 @@
 
 ## Sorting on Ag-grid
 
-* Click on column "Name" below "Participant"
-* Click on column "Name" below "Participant"
-* Click on column "Name" below "Participant"
+* Sort column "Name"
+* Click on column "Name" again to change the sort order
+* Click on column "Name" again to remove the sort order
 
 ## Filtering on Ag-grid
 
 * Click on filter for the column "Language"
-* Click on checkbox next to "Select All" below "Language"
-* Click on checkbox next to "English" below "Language"
-* Click on checkbox next to "Greek" below "Language"
+* Unselect All optioins in the filter below "Language"
+* Select option "English" below "Language"
+* Select option "Greek" below "Language"
 
 ## Group elements
 * Drag column "Language" to set row groups

@@ -32,8 +32,8 @@ step("Close Column options", async () => {
     await click("Columns");
 });
 
-step("Click on column <columnName> below <relativeText>", async (columnName, relativeText) => {
-    await click(columnName,below(relativeText));
+step("Click on column <columnName>", async (columnName) => {
+    await click(columnName);
 });
 
 step("write <someText> below <relativeText>", async function(someText, relativeText) {
@@ -45,7 +45,11 @@ step("Click on filter for the column <relativeText>", async function (relativeTe
     await click(button({"aria-label": "Open Filter Menu"}),below(relativeText),toRightOf(relativeText))
 });
 
-step("Click on checkbox next to <value> below <relativeText>", async function(value, relativeText) {
+step("Unselect All optioins in the filter below <relativeText>", async function(relativeText) {
+    await click(checkBox(toLeftOf(text("Select All",below(relativeText)))));
+});
+
+step("Select option <value> below <relativeText>", async function (value, relativeText) {
     await click(checkBox(toLeftOf(text(value,below(relativeText)))));
 });
 
@@ -55,4 +59,9 @@ step("Drag column <arg0> to set row groups", async function(arg0) {
 
 step("Select <relativeText>", async function(relativeText) {
     await click(checkBox(toLeftOf(text(relativeText))));
+});
+
+step(["Sort column <columnName>","Click on column <columnName> again to change the sort order",
+"Click on column <columnName> again to remove the sort order"], async function(columnName) {
+    await click(columnName);
 });
