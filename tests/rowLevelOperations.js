@@ -36,9 +36,8 @@ step("Select date as tomorrow", async function() {
     var date = new Date();
     var last = new Date(date.getTime() + (1 * 24 * 60 * 60 * 1000));
     var day =last.getDate();
-
-    const mon = new Intl.DateTimeFormat('en', { month: 'long' }).format(date);    
-    console.log(day)
-    console.log(mon)
-    await click(day,below(mon),within($('.flatpickr-innerContainer')))
+    const mon = new Intl.DateTimeFormat('en', { month: 'long' }).format(last);    
+    if(date.getMonth()!=last.getMonth())
+        await click($('.flatpickr-next-month'));
+    await click(day.toString(),below(mon),within($('.flatpickr-innerContainer')))
 });
