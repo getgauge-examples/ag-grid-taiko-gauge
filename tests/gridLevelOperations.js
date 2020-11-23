@@ -1,6 +1,6 @@
 /* globals gauge*/
 "use strict";
-const { openBrowser, closeBrowser, goto, click, screenshot, write,below,textBox,button,dragAndDrop,text,checkBox,toLeftOf,into,$ } = require('taiko');
+const { openBrowser, closeBrowser, goto, click, screenshot, write,below,textBox,button,dragAndDrop,text,checkBox,toLeftOf,toRightOf,into } = require('taiko');
 const assert = require("assert");
 const path = require("path");
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
@@ -10,7 +10,6 @@ beforeSuite(async () => {
 });
 
 afterSuite(async () => {
-    console.log("here")
     await closeBrowser();
 });
 
@@ -26,7 +25,7 @@ step("Goto ag-grid example page", async () => {
 });
 
 step("Goto local ag-grid example page", async () => {
-    await goto('file:///<localfile_path>/project/index.html');
+    await goto('file:///'+process.cwd()+'/project/index.html');
 });
 
 step("Close Column options", async () => {
@@ -43,7 +42,7 @@ step("write <someText> below <relativeText>", async function(someText, relativeT
 });
 
 step("Click on filter for the column <relativeText>", async function (relativeText) {
-    await click(button({"aria-label": "Open Filter Menu"}),below(relativeText))
+    await click(button({"aria-label": "Open Filter Menu"}),below(relativeText),toRightOf(relativeText))
 });
 
 step("Click on checkbox next to <value> below <relativeText>", async function(value, relativeText) {
