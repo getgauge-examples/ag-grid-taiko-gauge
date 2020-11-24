@@ -13,9 +13,9 @@ This example covers
 ## Pre-requisites
 
 * [NodeJS](https://nodejs.org/en/)
-* [Gauge](https://docs.gauge.org/getting_started/installing-gauge.html?os=macos&language=javascript&ide=vscode)
-Taiko can easily be run with other javascript test runners like Mocha or Jest instead of Gauge. Gauge is listed as the dependency here as this project uses taiko with Gauge as its runner.
-* `npm install` inside the project directory installs the other pre-requisites
+* `npm install` 
+
+This will install all the pre-requisites for this project. Gauge,Taiko and ag-grid. Taiko can easily be run with other javascript test runners like Mocha or Jest instead of Gauge. Gauge is listed as the dependency here as this project uses taiko with Gauge.
 
 ## Running the tests
 * `npm run test`
