@@ -1,6 +1,6 @@
 # Ag-grid Row level operations
 ## Verify plain text in a row
-* Goto local ag-grid example page
+* Goto ag-grid example page
 * Verify the text in column "language" of row "0" is "English"
 
 ## Select element in combobox
