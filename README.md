@@ -1,6 +1,8 @@
 # Testing ag-grid with Taiko
 
-This is an example project to test ag-grid with Taiko. It mainly uses the example hosted on [ag-grid/example.php](https://www.ag-grid.com/example.php) for its test cases.
+This is an example project to test ag-grid with Taiko and Gauge. The same example with Taiko and Mocha is available at [ag-grid-taiko-mocha](https://github.com/sguptatw/ag-grid-taiko-mocha.git)
+
+It mainly uses the example hosted on [ag-grid/example.php](https://www.ag-grid.com/example.php) for its test cases.
 
 This example covers
 - Sorting an ag-grid column
@@ -18,5 +20,5 @@ This example covers
 This will install all the pre-requisites for this project. Gauge,Taiko and ag-grid. Taiko can easily be run with other javascript test runners like Mocha or Jest instead of Gauge. Gauge is listed as the dependency here as this project uses taiko with Gauge.
 
 ## Running the tests
-* `npm run test`
+* `npm test`
 This would run the tests by the runner Gauge and generate the reports under `reports/html-report/index.html`
