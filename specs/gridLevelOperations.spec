@@ -14,7 +14,6 @@
 * Click on filter for the column "Language"
 * Unselect All optioins in the filter below "Language"
 * Select option "English" below "Language"
-* Select option "Greek" below "Language"
 
 ## Group elements
 * Drag column "Language" to set row groups
